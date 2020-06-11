@@ -67,7 +67,7 @@ $preference->integrator_id="dev_24c65fb163bf11ea96500242ac130004";
 $preference->payment_methods=["excluded_payment_types"=>[["id"=>"atm"],
 														 ["id"=>"amex"]],
 							  "installments"=>6];
-
+$preference->auto_return="approved";
 
 $preference->save();
 
