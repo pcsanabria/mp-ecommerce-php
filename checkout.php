@@ -48,8 +48,8 @@ $item->id=1234;
 $item->title = $_POST["title"];
 $item->description="Dispositivo móvil de Tienda e-commerce";
 $item->quantity = 1;
-$item->image=$image;
-$item->unit_price = number_format($_POST["price"],2,".","");
+$item->picture_url=$image;
+$item->unit_price = $_POST["price"];
 $preference->items = array($item);
 
     $preference->back_urls=[
