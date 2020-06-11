@@ -29,6 +29,9 @@ $preference->payer=$payer;
 
 $back_url=(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://".$_SERVER["HTTP_HOST"]."/return.php";
 
+$notification_url=(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://".$_SERVER["HTTP_HOST"]."/notifications.php";
+
+
 if (file_exists($_POST["img"]))
 {
 	$image = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://".$_SERVER["HTTP_HOST"].substr($_POST["img"],1);
@@ -55,6 +58,8 @@ $preference->items = array($item);
     ];
 
 $preference->external_reference="info@pasaviga.com.ar";
+
+$preference->notification_url=$notification_url;
 
 $preference->integrator_id="dev_24c65fb163bf11ea96500242ac130004";
 
