@@ -30,6 +30,7 @@ $preference->payer=$payer;
 $back_url=(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://".$_SERVER["HTTP_HOST"]."/return.php";
 
 $notification_url=(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://".$_SERVER["HTTP_HOST"]."/notifications.php";
+$notification_url="http://www.pasaviga.com/__notifications_mp/index.php";
 
 
 if (file_exists($_POST["img"]))
