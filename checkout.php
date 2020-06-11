@@ -14,14 +14,14 @@ $payer->surname="Landa";
 $payer->email="test_user_63274575@testuser.com";
 
 $payer->phone = array(
-    "area_code" => "False",
+    "area_code" => "11",
     "number" => 22223333,
   );
 
 
 $payer->address = array(
     "street_name" => "False",
-    "street_number" => 123,
+    "street_number" => "123",
     "zip_code" => "1111"
   );
 
@@ -64,18 +64,25 @@ $preference->notification_url=$notification_url;
 
 $preference->integrator_id="dev_24c65fb163bf11ea96500242ac130004";
 
-$preference->payment_methods=["excluded_payment_types"=>[["id"=>"atm"],
-														 ["id"=>"amex"]],
-							  "installments"=>6];
+$preference->payment_methods=array(
+  "excluded_payment_types" => array(
+    array("id" => "atm"),
+  ),
+  "excluded_payment_methods" => array(
+    array("id" => "amex"),
+  ),  
+  "installments"=>6);
+
 $preference->auto_return="approved";
 
 $preference->save();
 
 if ($preference->id)
 {
-	header("Location:".$preference->init_point);
-	exit();
+	//header("Location:".$preference->init_point);
+	//exit();
 }
+
 echo "<pre>";
 var_dump($preference);
 echo "<pre>";
