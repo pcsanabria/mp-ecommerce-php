@@ -69,6 +69,7 @@ $preference->payment_methods=["excluded_payment_types"=>[["id"=>"atm"],
 
 
 $preference->save();
+
 if ($preference->id)
 {
 	header("Location:".$preference->sandbox_init_point);
