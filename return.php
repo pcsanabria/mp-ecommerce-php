@@ -14,7 +14,7 @@
 		case 'pending':
 			echo "<h2>Tu pago esta pendiente.</h2>";
 			break;
-		case 'failure':
+		case 'success':
 			echo "<h2>Tu pago fue exitoso</h2>Información:";
 			echo "<pre>";
 			var_dump($_GET);
