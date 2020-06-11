@@ -72,7 +72,7 @@ $preference->save();
 
 if ($preference->id)
 {
-	header("Location:".$preference->sandbox_init_point);
+	header("Location:".$preference->init_point);
 	exit();
 }
 echo "<pre>";
