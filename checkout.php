@@ -79,8 +79,8 @@ $preference->save();
 
 if ($preference->id)
 {
-	//header("Location:".$preference->init_point);
-	//exit();
+	header("Location:".$preference->init_point);
+	exit();
 }
 
 echo "<pre>";
